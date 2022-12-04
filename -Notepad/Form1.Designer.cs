@@ -80,7 +80,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(191, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Version 7.37.522 (Unregistered)";
+            this.label2.Text = "Version 7.69.420 (Unregistered)";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // label3
