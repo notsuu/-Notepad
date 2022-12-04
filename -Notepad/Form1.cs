@@ -38,7 +38,7 @@ namespace _Notepad
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            wait(5000);
+            wait(rand.Next(90000, 360000));
             Form2 form2 = new Form2();
             form2.Show();
             loaded = true;
