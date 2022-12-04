@@ -13,6 +13,7 @@ namespace _Notepad
 {
     public partial class Form1 : Form
     {
+        bool loaded = false;
         Random rand = new Random();
         public Form1()
         {
@@ -37,10 +38,16 @@ namespace _Notepad
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            wait(rand.Next(90000,360000));
+            wait(5000);
             Form2 form2 = new Form2();
             form2.Show();
+            loaded = true;
             this.Hide();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!loaded) { e.Cancel = true; }
         }
     }
 }
