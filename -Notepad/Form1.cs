@@ -13,6 +13,7 @@ namespace _Notepad
 {
     public partial class Form1 : Form
     {
+        Random rand = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -21,17 +22,14 @@ namespace _Notepad
         {
             var timer1 = new System.Windows.Forms.Timer();
             if (milliseconds == 0 || milliseconds < 0) return;
-
             timer1.Interval = milliseconds;
             timer1.Enabled = true;
             timer1.Start();
-
             timer1.Tick += (s, e) =>
             {
                 timer1.Enabled = false;
                 timer1.Stop();
             };
-
             while (timer1.Enabled)
             {
                 Application.DoEvents();
@@ -39,7 +37,7 @@ namespace _Notepad
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            wait(5000);
+            wait(rand.Next(90000,360000));
             Form2 form2 = new Form2();
             form2.Show();
             this.Hide();
